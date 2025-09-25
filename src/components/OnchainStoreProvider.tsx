@@ -17,6 +17,15 @@ type OnchainStoreProviderReact = {
 };
 
 const products: Product[] = [
+  { 
+    id: 'test-product', 
+    name: 'testürünü', 
+    price: 1.00, 
+    image: jacketImage, // Geçici olarak mevcut resmi kullanıyoruz
+    description: 'test ürünü açıklaması',
+    commerceId: '1e39e95a-e7f2-466a-9b0e-ddbaf2c02a6f',
+    currency: 'TRY'
+  },
   { id: 'product1', name: `'BUILDER' JACKET`, price: 0.04, image: jacketImage },
   {
     id: 'product2',

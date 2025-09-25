@@ -13,15 +13,15 @@ export default function OnchainStoreSummary() {
             fontStretch: 'condensed',
           }}
         >
-          The future of commerce is less fee. More creativity.
+          <span className="text-[#0052FF]">GRAINZ</span> ile Web3 alışverişin geleceğini yaşayın.
         </h2>
         <p className="text-sm leading-relaxed">
-          People and businesses lose tens of billions of dollars in transaction
-          fees and countless hours in delays to the current system that they
-          wouldn't with onchain payments.
+          Kripto para ile güvenli, hızlı ve düşük komisyonlu alışveriş deneyimi. 
+          Geleneksel ödeme sistemlerinin yüksek ücretlerinden kurtulun.
         </p>
         <p className="text-sm leading-relaxed">
-          We're updating the system so it's cheaper and faster.
+          USDC, ETH ve diğer kripto paralarla anında ödeme yapın. 
+          Blockchain teknolojisinin gücüyle desteklenen modern e-ticaret.
         </p>
         <div className="flex flex-col pt-6">
           <p className="pt-2 pb-2 font-bold text-sm leading-relaxed">

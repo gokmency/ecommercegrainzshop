@@ -11,6 +11,9 @@ export type Product = {
   name: string;
   price: number;
   image: string | StaticImageData;
+  description?: string;
+  commerceId?: string; // Coinbase Commerce Product ID
+  currency?: string;
 };
 
 export type Quantities = Record<string, number>;

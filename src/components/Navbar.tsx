@@ -8,7 +8,7 @@ import {
 } from 'src/links';
 import { ExternalLinkSvg } from 'src/svg/ExternalLinkSvg';
 import { MenuSvg } from 'src/svg/MenuSvg';
-import OnchainKitShopSvg from 'src/svg/OnchainKitShopSvg';
+import GrainzLogo from 'src/svg/GrainzLogo';
 import type { NavbarLinkReact } from 'src/types';
 
 function NavbarLink({ link, label }: NavbarLinkReact) {
@@ -46,10 +46,11 @@ export default function Navbar() {
       <div className="mx-auto flex h-full max-w-5xl items-center px-4 py-2 lg:px-6">
         <div className="flex w-full items-center justify-between">
           <div className="flex items-center space-x-3">
-            <OnchainKitShopSvg />
-            <span className="ock-bg-alternate ock-text-foreground rounded-sm px-2 py-0.5 font-regular text-xs">
-              Template
-            </span>
+            <GrainzLogo width={36} height={36} />
+            <div className="flex flex-col">
+              <span className="font-bold text-lg text-[#0052FF]">GRAINZ</span>
+              <span className="text-xs text-gray-500">Web3 Shop</span>
+            </div>
           </div>
           <nav className="hidden md:block">
             <ul className="flex space-x-6">

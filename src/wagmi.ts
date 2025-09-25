@@ -8,7 +8,7 @@ export const wagmiConfig = createConfig({
   chains: [base],
   connectors: [
     coinbaseWallet({
-      appName: 'onchain-commerce-template',
+      appName: 'GRAINZ Shop',
     }),
   ],
   ssr: true,
