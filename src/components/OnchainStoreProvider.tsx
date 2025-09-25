@@ -1,10 +1,6 @@
 import { createContext, useContext, useMemo, useState } from 'react';
 import type { ReactNode } from 'react';
 import type { OnchainStoreContextType } from '../types';
-import jacketImage from '../images/jacket.png';
-import airpodsImage from '../images/airpods.png';
-import mugImage from '../images/mug.png';
-import bottleImage from '../images/bottle.png';
 import type { Product } from 'src/types';
 
 const emptyContext = {} as OnchainStoreContextType;
@@ -18,32 +14,40 @@ type OnchainStoreProviderReact = {
 
 const products: Product[] = [
   { 
-    id: 'test-product', 
-    name: 'testürünü', 
-    price: 1.00, 
-    image: jacketImage, // Geçici olarak mevcut resmi kullanıyoruz
-    description: 'test ürünü açıklaması',
-    commerceId: '1e39e95a-e7f2-466a-9b0e-ddbaf2c02a6f',
-    currency: 'TRY'
+    id: 'grainz-phone-case', 
+    name: 'GRAINZ iPhone Kılıfı', 
+    price: 0.01, 
+    image: '/images/image-1.jpg',
+    description: 'Premium iPhone kılıfı - GRAINZ tasarımı ile özel üretim',
+    commerceId: '961fa502-4c49-47c1-a310-7a6b6dd96edc',
+    currency: 'USDC'
   },
-  { id: 'product1', name: `'BUILDER' JACKET`, price: 0.04, image: jacketImage },
-  {
-    id: 'product2',
-    name: `'DND, I'M BUILDING' AIRPODS`,
-    price: 0.01,
-    image: airpodsImage,
-  },
-  {
-    id: 'product3',
-    name: `'CAFFEINATED TO BUILD' MUG`,
-    price: 0.02,
-    image: mugImage,
+  { 
+    id: 'grainz-wireless-earbuds', 
+    name: 'GRAINZ Wireless Kulaklık', 
+    price: 0.02, 
+    image: '/images/image-2.jpg',
+    description: 'Yüksek kaliteli wireless kulaklık - Web3 teknolojisi ile geliştirildi',
+    commerceId: 'be0f4658-f4c8-4277-b7b3-45cc3b36380b',
+    currency: 'USDC'
   },
   {
-    id: 'product4',
-    name: `'HYDRATED TO BUILD' BOTTLE`,
-    price: 0.01,
-    image: bottleImage,
+    id: 'grainz-crypto-mug',
+    name: 'GRAINZ Kripto Kupa',
+    price: 0.03,
+    image: '/images/image-3.jpg',
+    description: 'Seramik kupa - Bitcoin ve Ethereum logoları ile özel tasarım',
+    commerceId: '027453a3-3129-4321-95df-03db6122adcd',
+    currency: 'USDC'
+  },
+  {
+    id: 'grainz-water-bottle',
+    name: 'GRAINZ Su Şişesi',
+    price: 0.04,
+    image: '/images/image-4.jpg',
+    description: 'Çevre dostu su şişesi - GRAINZ logosu ile premium kalite',
+    commerceId: '70315d15-30c1-4365-b382-de2d2545374a',
+    currency: 'USDC'
   },
 ];
 

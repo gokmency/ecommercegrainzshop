@@ -49,8 +49,8 @@ export default function OnchainStoreCart({
       .join(', ');
     
     const chargeDetails = {
-      name: 'Web3 E-ticaret Siparişi',
-      description,
+      name: 'GRAINZ Shop Siparişi',
+      description: `GRAINZ Shop - ${description}`,
       pricing_type: 'fixed_price',
       local_price: {
         amount: totalSum.toString(),
@@ -82,14 +82,12 @@ export default function OnchainStoreCart({
       <div className="mx-auto max-w-5xl ">
         <div className="flex flex-col items-start justify-between py-4 md:flex-row md:items-center">
           <div className="mb-2 hidden flex-col px-4 text-xs sm:flex md:mb-0 md:w-1/3 lg:px-6">
-            <span>Built with OnchainKit</span>
+            <span className="text-gray-500">© 2025 GRAINZ Shop</span>
             <a
-              href="https://www.coinbase.com/legal/privacy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="pt-1 text-[8px] text-gray-600 hover:text-gray-900"
+              href="#privacy"
+              className="pt-1 text-[8px] text-gray-600 hover:text-[#0052FF] transition-colors"
             >
-              Privacy Policy
+              Gizlilik Politikası
             </a>
           </div>
           <div className="flex w-full grow flex-col items-center justify-between gap-2 px-4 sm:flex-row sm:gap-0 md:w-auto lg:px-6">

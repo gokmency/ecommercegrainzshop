@@ -1,17 +1,9 @@
 import { cn, pressable } from '@coinbase/onchainkit/theme';
 import { useCallback, useState } from 'react';
-import {
-  GITHUB_LINK,
-  ONCHAINKIT_LINK,
-  TEMPLATE_LINK,
-  TWITTER_LINK,
-} from 'src/links';
-import { ExternalLinkSvg } from 'src/svg/ExternalLinkSvg';
 import { MenuSvg } from 'src/svg/MenuSvg';
 import GrainzLogo from 'src/svg/GrainzLogo';
-import type { NavbarLinkReact } from 'src/types';
 
-function NavbarLink({ link, label }: NavbarLinkReact) {
+function NavbarLink({ link, label }: { link: string; label: string }) {
   return (
     <li
       className={cn(
@@ -21,14 +13,11 @@ function NavbarLink({ link, label }: NavbarLinkReact) {
     >
       <a
         href={link}
-        className="ock-text-foreground flex items-center text-xs"
+        className="text-gray-700 hover:text-[#0052FF] flex items-center text-sm font-medium transition-colors"
         target="_blank"
         rel="noreferrer"
       >
         {label}
-        <span className="pl-1">
-          <ExternalLinkSvg />
-        </span>
       </a>
     </li>
   );
@@ -54,9 +43,10 @@ export default function Navbar() {
           </div>
           <nav className="hidden md:block">
             <ul className="flex space-x-6">
-              <NavbarLink link={TEMPLATE_LINK} label="FORK THIS TEMPLATE" />
-              <NavbarLink link={ONCHAINKIT_LINK} label="ONCHAINKIT" />
-              <NavbarLink link={TWITTER_LINK} label="X" />
+              <NavbarLink link="#products" label="Ürünler" />
+              <NavbarLink link="#about" label="Hakkımızda" />
+              <NavbarLink link="#contact" label="İletişim" />
+              <NavbarLink link="https://twitter.com/grainzshop" label="Twitter" />
             </ul>
           </nav>
           <button
@@ -69,12 +59,12 @@ export default function Navbar() {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="bg-[white] md:hidden">
+        <div className="bg-[white] md:hidden border-t">
           <ul className="flex flex-col items-start space-y-2 px-4 py-2">
-            <NavbarLink link={TEMPLATE_LINK} label="FORK THIS TEMPLATE" />
-            <NavbarLink link={ONCHAINKIT_LINK} label="ONCHAINKIT" />
-            <NavbarLink link={GITHUB_LINK} label="GITHUB" />
-            <NavbarLink link={TWITTER_LINK} label="X" />
+            <NavbarLink link="#products" label="Ürünler" />
+            <NavbarLink link="#about" label="Hakkımızda" />
+            <NavbarLink link="#contact" label="İletişim" />
+            <NavbarLink link="https://twitter.com/grainzshop" label="Twitter" />
           </ul>
         </div>
       )}

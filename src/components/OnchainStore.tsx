@@ -1,4 +1,5 @@
 import { Banner } from './Banner';
+import Footer from './Footer';
 import Navbar from './Navbar';
 import OnchainStoreCart from './OnchainStoreCart';
 import OnchainStoreItems from './OnchainStoreItems';
@@ -18,6 +19,7 @@ export default function OnchainStore() {
           </div>
           <OnchainStoreCart />
         </main>
+        <Footer />
       </div>
     </OnchainStoreProvider>
   );
