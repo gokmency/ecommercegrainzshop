@@ -1,8 +1,12 @@
-# 🚀 Web3 E-Ticaret MVP Projesi
+# 🚀 GRAINZ Shop - Web3 E-Ticaret MVP Projesi
 
 ## 📋 Proje Özeti
 
-Bu proje, Coinbase OnchainKit ve Commerce API kullanarak tam fonksiyonel bir Web3 e-ticaret sitesi MVP'si geliştirmeyi hedeflemektedir.
+GRAINZ Shop, Coinbase OnchainKit ve Commerce API kullanarak tam fonksiyonel bir Web3 e-ticaret sitesi MVP'si. Kripto para ile güvenli, hızlı ve düşük komisyonlu alışveriş deneyimi sunar.
+
+**Proje Durumu:** 🟡 MVP Geliştirme Aşaması  
+**Son Güncelleme:** 25 Eylül 2025  
+**Versiyon:** v1.0.0-beta
 
 ## 🎯 MVP Hedefleri
 
@@ -10,8 +14,9 @@ Bu proje, Coinbase OnchainKit ve Commerce API kullanarak tam fonksiyonel bir Web
 - ✅ Web3 cüzdan bağlantısı (Coinbase Smart Wallet)
 - ✅ Ürün kataloğu görüntüleme
 - ✅ Sepet sistemi
-- 🚧 Gerçek kripto ödeme sistemi
-- 🚧 Coinbase Commerce entegrasyonu
+- ✅ Gerçek kripto ödeme sistemi
+- ✅ Coinbase Commerce entegrasyonu
+- ✅ Statik Commerce URL yönlendirme
 - 🚧 Sipariş takip sistemi
 
 ### Teknik Özellikler
@@ -29,34 +34,46 @@ Bu proje, Coinbase OnchainKit ve Commerce API kullanarak tam fonksiyonel bir Web
    - OnchainKit entegrasyonu tamamlandı
    - Wagmi konfigürasyonu yapıldı
    - Temel UI bileşenleri hazır
+   - GRAINZ Shop branding uygulandı
 
 2. **Ürün Yönetimi**
-   - Statik ürün listesi
+   - 4 adet GRAINZ ürünü eklendi
    - Sepet functionality
    - Miktar seçimi
    - Commerce ID desteği
+   - Statik Commerce URL yönlendirme
 
 3. **Web3 Altyapısı**
    - Coinbase Wallet connector
    - Base chain desteği
    - OnchainKit provider yapılandırması
+   - Checkout sistemi aktif
+
+4. **Ödeme Sistemi**
+   - Coinbase Commerce API entegrasyonu
+   - Dinamik charge oluşturma
+   - Statik URL yönlendirme
+   - Sepet temizleme özelliği
 
 ### 🚧 Geliştirme Gereken Özellikler
-1. **Ödeme Sistemi**
-   - Checkout akışını aktifleştirme
-   - Commerce API entegrasyonu
-   - Gerçek ödeme işlemleri
-
-2. **Kullanıcı Deneyimi**
+1. **Kullanıcı Deneyimi**
    - Loading states
    - Error handling
    - Success feedbacks
    - Responsive design iyileştirmeleri
+   - Kullanıcı bilgi toplama sistemi
 
-3. **Güvenlik & Optimizasyon**
+2. **Güvenlik & Optimizasyon**
    - API key yönetimi
    - Environment konfigürasyonu
    - Performance optimizasyonu
+   - Input validation
+
+3. **İş Mantığı**
+   - Sipariş takip sistemi
+   - Email bildirimleri
+   - Stok yönetimi
+   - Admin paneli
 
 ## 🎯 MVP Geliştirme Roadmap'i
 
@@ -294,27 +311,75 @@ Bu proje, Coinbase OnchainKit ve Commerce API kullanarak tam fonksiyonel bir Web
 
 ---
 
+## 🚨 Tespit Edilen Sorunlar ve Eksikler
+
+### 🔴 Kritik Sorunlar
+1. **Image Loading Hatası**
+   - Next.js Image component'inde width/height eksikliği
+   - 404 hatası: `/images/image-1.png` dosyaları bulunamıyor
+   - **Çözüm:** Image dosyalarını `public/images/` klasörüne ekle
+
+2. **API Key Uyarıları**
+   - MetaMask SDK async-storage hatası
+   - Coinbase analytics 401 hatası
+   - **Çözüm:** Geliştirme ortamında normal, production'da düzelt
+
+3. **Commerce API Minimum Tutar**
+   - $0.001'den az tutarlar kabul edilmiyor
+   - **Çözüm:** Ürün fiyatlarını $0.01'den başlat (✅ Yapıldı)
+
+### 🟡 Orta Öncelikli Sorunlar
+1. **Kullanıcı Bilgi Toplama**
+   - Checkout öncesi kullanıcı bilgileri alınmıyor
+   - **Çözüm:** UserInfoModal component'i ekle
+
+2. **Error Handling**
+   - Checkout sırasında hata mesajları yok
+   - **Çözüm:** Try-catch blokları ve user feedback
+
+3. **Loading States**
+   - Checkout sırasında loading göstergesi yok
+   - **Çözüm:** Loading spinner ve disabled states
+
+### 🟢 Düşük Öncelikli İyileştirmeler
+1. **Responsive Design**
+   - Mobile görünüm optimizasyonu
+   - Tablet uyumluluğu
+
+2. **Performance**
+   - Image optimization
+   - Code splitting
+   - Lazy loading
+
+3. **SEO & Analytics**
+   - Meta tags
+   - Google Analytics
+   - Social media tags
+
 ## 🎯 Next Steps
 
 1. **Immediate (Bugün)**
-   - Checkout sistemini aktifleştir
-   - API entegrasyonunu test et
-   - Environment'ı optimize et
+   - ✅ Checkout sistemini aktifleştir
+   - ✅ API entegrasyonunu test et
+   - ✅ Environment'ı optimize et
+   - 🔄 Image dosyalarını ekle
+   - 🔄 UserInfoModal component'i implement et
 
 2. **This Week**
-   - Full ödeme akışını test et
-   - UI/UX iyileştirmeleri
-   - Error handling
+   - ✅ Full ödeme akışını test et
+   - 🔄 UI/UX iyileştirmeleri
+   - 🔄 Error handling
+   - 🔄 Loading states
 
 3. **Next Week**
-   - Production deployment
-   - Security audit
-   - Performance optimization
+   - 🔄 Production deployment
+   - 🔄 Security audit
+   - 🔄 Performance optimization
 
 4. **Future**
-   - Advanced features
-   - Scaling optimization
-   - Business features
+   - 🔄 Advanced features
+   - 🔄 Scaling optimization
+   - 🔄 Business features
 
 ---
 

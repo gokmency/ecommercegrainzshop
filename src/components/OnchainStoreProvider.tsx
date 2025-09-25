@@ -17,7 +17,7 @@ const products: Product[] = [
     id: 'grainz-phone-case', 
     name: 'GRAINZ iPhone Kılıfı', 
     price: 0.01, 
-    image: '/images/image-1.jpg',
+    image: '/images/image-1.png',
     description: 'Premium iPhone kılıfı - GRAINZ tasarımı ile özel üretim',
     commerceId: '961fa502-4c49-47c1-a310-7a6b6dd96edc',
     currency: 'USDC'
@@ -26,7 +26,7 @@ const products: Product[] = [
     id: 'grainz-wireless-earbuds', 
     name: 'GRAINZ Wireless Kulaklık', 
     price: 0.02, 
-    image: '/images/image-2.jpg',
+    image: '/images/image-2.png',
     description: 'Yüksek kaliteli wireless kulaklık - Web3 teknolojisi ile geliştirildi',
     commerceId: 'be0f4658-f4c8-4277-b7b3-45cc3b36380b',
     currency: 'USDC'
@@ -35,7 +35,7 @@ const products: Product[] = [
     id: 'grainz-crypto-mug',
     name: 'GRAINZ Kripto Kupa',
     price: 0.03,
-    image: '/images/image-3.jpg',
+    image: '/images/image-3.png',
     description: 'Seramik kupa - Bitcoin ve Ethereum logoları ile özel tasarım',
     commerceId: '027453a3-3129-4321-95df-03db6122adcd',
     currency: 'USDC'
@@ -44,7 +44,7 @@ const products: Product[] = [
     id: 'grainz-water-bottle',
     name: 'GRAINZ Su Şişesi',
     price: 0.04,
-    image: '/images/image-4.jpg',
+    image: '/images/image-4.png',
     description: 'Çevre dostu su şişesi - GRAINZ logosu ile premium kalite',
     commerceId: '70315d15-30c1-4365-b382-de2d2545374a',
     currency: 'USDC'

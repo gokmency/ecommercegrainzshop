@@ -14,7 +14,7 @@ export default function OnchainStoreCart({
   setShowModal,
   showModal,
 }: OnchainStoreCartReact = {}) {
-  const { quantities, products } = useOnchainStoreContext();
+  const { quantities, products, setQuantities } = useOnchainStoreContext();
 
   const totalSum = useMemo(() => {
     return (
@@ -77,6 +77,11 @@ export default function OnchainStoreCart({
     setShowModal?.(true);
   }, [setShowModal]);
 
+  const clearCart = useCallback(() => {
+    setQuantities({});
+    console.log('🛒 Sepet temizlendi');
+  }, [setQuantities]);
+
   return (
     <div className="-mx-[50vw] fixed right-1/2 bottom-0 left-1/2 w-screen border-gray-200 border-t bg-[white]">
       <div className="mx-auto max-w-5xl ">
@@ -91,9 +96,19 @@ export default function OnchainStoreCart({
             </a>
           </div>
           <div className="flex w-full grow flex-col items-center justify-between gap-2 px-4 sm:flex-row sm:gap-0 md:w-auto lg:px-6">
-            <h2 className="font-bold text-lg md:w-11/12">
-              TOTAL {totalSum.toFixed(2)} USDC
-            </h2>
+            <div className="flex items-center gap-4 md:w-11/12">
+              <h2 className="font-bold text-lg">
+                TOTAL {totalSum.toFixed(2)} USDC
+              </h2>
+              {totalSum > 0 && (
+                <button
+                  onClick={clearCart}
+                  className="text-xs text-gray-500 hover:text-red-500 transition-colors"
+                >
+                  🗑️ Sepeti Temizle
+                </button>
+              )}
+            </div>
             <div className="w-64">
               {/* Gerçek Web3 Checkout Sistemi */}
               <Checkout
